@@ -10,17 +10,17 @@
 
         // iOS detection
         if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            window.location.href = "https://apps.apple.com/us/app/your-ios-app-link";
+            window.location.href = "https://apps.apple.com/us/app/buzzcut-automated-buzzer/id6499471607";
         }
 
         // Android detection
         if (/android/i.test(userAgent)) {
-            window.location.href = "https://play.google.com/store/apps/details?id=your-android-app-link";
+            window.location.href = "https://play.google.com/store/apps/details?id=io.aphrx.buzzcut&pli=1";
         }
 
         // If not mobile, redirect to a default page or show a message
         else {
-            document.body.innerHTML = '<h1>Please visit this page on a mobile device to be redirected to the app store.</h1>';
+            document.body.innerHTML = '<p>Please visit this page on a mobile device to be redirected to the app store.</p>';
         }
     });
     </script>
