@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Redirect</title>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // iOS detection
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            window.location.href = "https://apps.apple.com/us/app/your-ios-app-link";
+        }
+
+        // Android detection
+        if (/android/i.test(userAgent)) {
+            window.location.href = "https://play.google.com/store/apps/details?id=your-android-app-link";
+        }
+
+        // If not mobile, redirect to a default page or show a message
+        else {
+            document.body.innerHTML = '<h1>Please visit this page on a mobile device to be redirected to the app store.</h1>';
+        }
+    });
+    </script>
+</head>
+<body>
+</body>
+</html>
